@@ -1,0 +1,121 @@
+body{
+    background: linear-gradient(to bottom,#32a852,#dff1ff);
+}
+
+.container {
+    max-width: 80% !important;
+}
+
+section .content {
+    margin: auto;
+    width: 100%;
+    display: block;
+}
+
+section .color {
+    position: absolute;
+    filter: blur(200px);
+}
+
+    section .color:nth-child(1) {
+        z-index: -1;
+        background: #f5ee1d;
+        width: 700px;
+        height: 700px;
+        top: -350px;
+    }
+
+    section .color:nth-child(2) {
+        z-index: -1;
+        background: #1831ed;
+        width: 500px;
+        height: 500px;
+        bottom: 250px;
+        left: 300px;
+    }
+
+    section .color:nth-child(3) {
+        z-index: -1;
+        background: #18e6ed;
+        width: 600px;
+        height: 600px;
+        bottom: 450px;
+        right: 500px;
+    }
+
+.choice {
+    padding:0;
+    text-align: center;
+    z-index: 2;
+}
+
+.elchoice {
+    list-style: none;
+    position: relative;
+    margin: 6vh 4vh 5vh 4vh;
+    text-align: left;
+    display: inline-block;
+}
+
+    .elchoice > a {
+        font-size: 4vh;
+        font-weight: bold;
+        position: relative;
+        width: 40vh;
+        height: 30vh;
+        display: block;
+        border: 0.2vh solid white;
+        border-radius: 3vh;
+        text-decoration: none;
+        color: white;
+        padding: 2vh;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 5px 45px rgba(102,100,100,0.75);
+        backdrop-filter: blur(2px);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+        .elchoice > a:hover {
+            transform: translateY(-8vh);
+        }
+
+        .elchoice > a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15vh;
+            height: 100%;
+            background-color: rgba(255,255,255,0.6);
+            transform: skewX(45deg) translateX(80vh);
+            transition: 0.5s;
+        }
+
+        .elchoice > a:hover::before {
+            transform: skewX(45deg) translateX(-30vh);
+        }
+.descriptionBox {
+    background-color: rgba(230,226,129,0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+@media(max-width:1049px) {
+    
+    .elchoice {
+        margin: 6vh 0 5vh 0;
+        width: 100%;
+        height: 20vh;
+    }
+        .elchoice > a {
+            width: 100%;
+            height: 20vh;
+        }
+            .elchoice > a::before {
+                transform: skewX(45deg) translateX(120vh);
+            }
+}
+

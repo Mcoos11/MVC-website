@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+
+
+<div class="descriptionBox">
+    <h1>See otherwise</h1>
+    <p class="lead">
+
+        is an application that allows us to see the world as from another reality. Upload your photos and use any of the available filters and look at them from a different angle.
+    </p>
+
+</div>
+<section class="content">
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <ul class="choice">
+        <li class="elchoice">
+            @Html.ActionLink("Sketch with pencil filter", "Filter1", "Home")
+        </li>
+        <li class="elchoice">
+            @Html.ActionLink("Interwar period film filter", "Filter2", "Home")
+        </li>
+        <li class="elchoice">
+            @Html.ActionLink("Show Filter3", "Filter3", "Home")
+        </li>
+    </ul>
+</section>
+
